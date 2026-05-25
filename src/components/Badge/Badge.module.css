@@ -9,3 +9,4 @@
 .green  { background: rgba(29, 255, 158, 0.15); color: var(--yaa-green); }
 .amber  { background: rgba(255, 209, 102, 0.15); color: var(--yaa-amber); }
 .orange { background: rgba(255, 152, 113, 0.15); color: var(--yaa-orange); }
+.yellow { background: rgba(255, 246, 0, 0.16); color: var(--yaa-yellow); }
