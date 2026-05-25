@@ -1,0 +1,11 @@
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: var(--yaa-r-sm);
+  font-size: var(--yaa-fs-detail);
+  font-weight: var(--yaa-fw-bold);
+  font-family: var(--yaa-font);
+}
+.green  { background: rgba(29, 255, 158, 0.15); color: var(--yaa-green); }
+.amber  { background: rgba(255, 209, 102, 0.15); color: var(--yaa-amber); }
+.orange { background: rgba(255, 152, 113, 0.15); color: var(--yaa-orange); }

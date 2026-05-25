@@ -1,0 +1,17 @@
+.callout {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: var(--yaa-fs-sm);
+  font-family: var(--yaa-font);
+  max-width: 560px;
+}
+.warning {
+  background: rgba(255, 209, 102, 0.08);
+  border: 1px solid rgba(255, 209, 102, 0.3);
+  color: var(--yaa-amber);
+}
+.error {
+  background: rgba(255, 152, 113, 0.08);
+  border: 1px solid rgba(255, 152, 113, 0.3);
+  color: var(--yaa-orange);
+}

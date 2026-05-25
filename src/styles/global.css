@@ -1,0 +1,18 @@
+/* Глобальная база для превью Storybook — повторяет layout.tsx в cerebro */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Press+Start+2P&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: var(--yaa-font);
+  color: var(--yaa-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* радиальные градиенты фона как в продакшене (виден на тёмном backgrounds) */
+.sb-show-main.sb-main-centered,
+.sb-show-main.sb-main-padded {
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(29, 255, 158, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 88% 92%, rgba(46, 184, 110, 0.08) 0%, transparent 45%);
+}

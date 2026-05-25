@@ -1,0 +1,101 @@
+/* ============================================================
+   YAA Design System — токены
+   Извлечены из фронта cerebro: Vanga · SIMMY · Graph · Map.
+   Тёмная зелёно-чёрная тема, неоновый зелёный акцент.
+   ============================================================ */
+
+:root {
+  /* ── Палитра: фон ── */
+  --yaa-bg:        #040706;  /* фон приложения */
+  --yaa-bg-graph:  #050a08;  /* фон force-directed графа */
+  --yaa-ink:       #04140b;  /* текст поверх зелёного */
+
+  /* ── Палитра: зелёный (сигнатурный) ── */
+  --yaa-green:     #1dff9e;  /* primary / акцент / активное */
+  --yaa-green-hi:  #38ffaa;  /* hover */
+  --yaa-green-2:   #4dffd1;  /* gradient companion */
+  --yaa-green-3:   #6affd1;  /* gradient companion */
+  --yaa-green-dk:  #2db86e;  /* chrome графа */
+
+  /* ── Палитра: текст ── */
+  --yaa-text:      #f4fff8;  /* 1° контраст */
+  --yaa-text-2:    #c4e8d6;  /* 2° / body */
+  --yaa-muted:     #7da590;  /* приглушённый / лейблы */
+
+  /* ── Палитра: статусы ── */
+  --yaa-amber:     #ffd166;  /* warning */
+  --yaa-orange:    #ff9871;  /* error / negative */
+
+  /* ── Поверхности и границы ── */
+  --yaa-surf:        rgba(13, 28, 21, 0.5);   /* карточка */
+  --yaa-surf-sub:    rgba(13, 28, 21, 0.4);   /* subtle */
+  --yaa-surf-drop:   rgba(8, 18, 13, 0.97);   /* dropdown */
+  --yaa-surf-input:  rgba(29, 255, 158, 0.04);
+  --yaa-surf-input-focus: rgba(29, 255, 158, 0.08);
+  --yaa-bd-soft:     rgba(29, 255, 158, 0.10);
+  --yaa-bd-mid:      rgba(29, 255, 158, 0.18);
+  --yaa-bd-strong:   rgba(29, 255, 158, 0.35);
+  --yaa-nav-bg:      rgba(4, 7, 6, 0.85);
+
+  /* ── Акцентные цвета продуктов ── */
+  --yaa-accent-hub:    #ff6b9d;
+  --yaa-accent-vanga:  #1dff9e;
+  --yaa-accent-simmy:  #39d0d8;
+  --yaa-accent-graph:  #a78bfa;
+  --yaa-accent-map:    #fbbf24;
+
+  /* ── Шкала размеров артиста (граф) ── */
+  --yaa-tier-star:  #ff6b6b;  /* ≥ 5M */
+  --yaa-tier-large: #ffa94d;  /* 1–5M */
+  --yaa-tier-mid:   #ffd93d;  /* 200K–1M */
+  --yaa-tier-club:  #6bcf7f;  /* 50–200K */
+  --yaa-tier-micro: #4dabf7;  /* < 50K */
+
+  /* ── Типографика ── */
+  --yaa-font: "Space Grotesk", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  --yaa-font-retro: "Press Start 2P", monospace;
+  --yaa-fs-hero:    64px;
+  --yaa-fs-h1:      32px;
+  --yaa-fs-h2:      24px;
+  --yaa-fs-lg:      18px;
+  --yaa-fs-input:   16px;
+  --yaa-fs-btn:     15px;
+  --yaa-fs-body:    14px;
+  --yaa-fs-sm:      13px;
+  --yaa-fs-detail:  12px;
+  --yaa-fs-label:   11px;
+  --yaa-fw-regular: 400;
+  --yaa-fw-medium:  500;
+  --yaa-fw-semibold:600;
+  --yaa-fw-bold:    700;
+  --yaa-fw-black:   800;
+
+  /* ── Отступы (4-base, с шагами интерфейса) ── */
+  --yaa-space-1: 4px;
+  --yaa-space-2: 8px;
+  --yaa-space-3: 12px;
+  --yaa-space-4: 16px;
+  --yaa-space-5: 20px;
+  --yaa-space-6: 24px;
+  --yaa-space-8: 32px;
+
+  /* ── Радиусы ── */
+  --yaa-r-xs: 4px;   /* бары, step-pills */
+  --yaa-r-sm: 8px;   /* chips, ghost-кнопки */
+  --yaa-r-md: 12px;  /* инпуты, кнопки */
+  --yaa-r-lg: 16px;  /* карточки */
+  --yaa-r-xl: 20px;  /* hero-панели */
+
+  /* ── Тени и свечения ── */
+  --yaa-elev-1: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --yaa-elev-2: 0 12px 40px rgba(0, 0, 0, 0.4);
+  --yaa-glow-soft: 0 0 24px rgba(29, 255, 158, 0.08);
+  --yaa-glow-btn:  0 0 12px rgba(29, 255, 158, 0.30);
+  --yaa-glow-num:  0 0 16px rgba(29, 255, 158, 0.60);
+
+  /* ── Прочее ── */
+  --yaa-blur: blur(12px);
+  --yaa-blur-sm: blur(8px);
+  --yaa-transition: all 0.15s ease;
+  --yaa-gradient-text: linear-gradient(120deg, var(--yaa-green), var(--yaa-green-2));
+}

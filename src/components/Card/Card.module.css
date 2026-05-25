@@ -1,0 +1,18 @@
+.card {
+  background: var(--yaa-surf);
+  border: 1px solid var(--yaa-bd-soft);
+  border-radius: var(--yaa-r-lg);
+  padding: 24px;
+  backdrop-filter: var(--yaa-blur-sm);
+  min-width: 320px;
+  color: var(--yaa-text);
+  font-family: var(--yaa-font);
+}
+.title {
+  font-size: var(--yaa-fs-label);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--yaa-muted);
+  margin: 0 0 16px;
+  font-weight: var(--yaa-fw-semibold);
+}

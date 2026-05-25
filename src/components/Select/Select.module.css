@@ -1,0 +1,15 @@
+.select {
+  background: var(--yaa-surf-input);
+  border: 1px solid var(--yaa-bd-mid);
+  border-radius: var(--yaa-r-md);
+  padding: 14px 16px;
+  font-size: var(--yaa-fs-input);
+  color: var(--yaa-text);
+  font-family: var(--yaa-font);
+  outline: none;
+  transition: var(--yaa-transition);
+  min-width: 200px;
+  cursor: pointer;
+}
+.select:focus { border-color: var(--yaa-green); background: var(--yaa-surf-input-focus); }
+.select option { background: var(--yaa-surf-drop); color: var(--yaa-text); }

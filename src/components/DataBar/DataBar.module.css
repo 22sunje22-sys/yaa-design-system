@@ -1,0 +1,22 @@
+.row {
+  display: grid;
+  grid-template-columns: 130px 1fr 80px;
+  gap: 16px;
+  align-items: center;
+  padding: 8px 0;
+  font-family: var(--yaa-font);
+  min-width: 420px;
+}
+.label { font-size: var(--yaa-fs-sm); color: var(--yaa-text); }
+.wrap {
+  height: 22px;
+  background: rgba(29, 255, 158, 0.06);
+  border-radius: var(--yaa-r-xs);
+  overflow: hidden;
+}
+.bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--yaa-green), var(--yaa-green-2));
+  border-radius: var(--yaa-r-xs);
+}
+.value { text-align: right; font-weight: var(--yaa-fw-semibold); font-size: var(--yaa-fs-sm); color: var(--yaa-text); }

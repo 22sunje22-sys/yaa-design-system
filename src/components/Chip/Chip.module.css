@@ -1,0 +1,13 @@
+.chip {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: var(--yaa-r-lg);
+  background: rgba(29, 255, 158, 0.08);
+  color: var(--yaa-green);
+  font-size: var(--yaa-fs-sm);
+  font-family: var(--yaa-font);
+  cursor: pointer;
+  border: 1px solid var(--yaa-bd-mid);
+  transition: var(--yaa-transition);
+}
+.chip:hover { background: rgba(29, 255, 158, 0.15); }

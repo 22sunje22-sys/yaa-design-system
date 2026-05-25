@@ -1,0 +1,21 @@
+.cell {
+  padding: 12px;
+  background: rgba(29, 255, 158, 0.03);
+  border-radius: 10px;
+  border: 1px solid var(--yaa-bd-soft);
+  font-family: var(--yaa-font);
+  min-width: 140px;
+}
+.label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--yaa-muted);
+  margin-bottom: 4px;
+  font-weight: var(--yaa-fw-semibold);
+}
+.value {
+  font-size: var(--yaa-fs-lg);
+  font-weight: var(--yaa-fw-semibold);
+  color: var(--yaa-text);
+}
