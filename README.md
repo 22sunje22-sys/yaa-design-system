@@ -60,6 +60,19 @@ src/
 - Крупные числа/заголовки — градиентный clip-text.
 - Интерфейс по-русски, технические термины (tier, power, signal) можно латиницей.
 
+## Статус раскатки (2026-05)
+
+| Проект | Тип | DS | Лого |
+|---|---|---|---|
+| yaa-events-dashboard (cerebro: хаб, Vanga, SIMMY, Граф, Карта) | Next.js | ✅ | ✅ favicon + HubNav |
+| intickets-dashboard | Next.js + Tailwind | ✅ @theme-рецепт | ✅ шапка + favicon |
+| yaa-fairytale-dashboard | Next.js + Tailwind | ✅ @theme-рецепт | ✅ шапка + favicon |
+| yaa_kz_dasbhoard | static HTML | — | ✅ favicon |
+| yaa-marketing-brief | static HTML | — | ✅ favicon |
+| остальные YAA-фронты | разные | ⏳ задача Софьи (2 нед) | ⏳ |
+
+Platinumlist / Chatpush репо — другой бренд, YAA-лого и DS на них не распространяются.
+
 ## Перевод дашбордов на YAA (Tailwind v4)
 
 Аналитические дашборды (intickets, fairytale и будущие) — на Tailwind v4 со светлой
