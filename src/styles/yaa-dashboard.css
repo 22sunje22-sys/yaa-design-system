@@ -1,0 +1,53 @@
+/* ============================================================
+   YAA Dashboard Theme — рецепт перевода аналитических дашбордов
+   (Tailwind v4) на язык YAA Design System.
+
+   Как пользоваться:
+   1. Дашборд должен рендериться в dark-режиме (<html class="dark">)
+      и использовать dark:-варианты (dark:bg-gray-900, dark:text-gray-400 …).
+      Почти все наши next-дашборды так и сделаны.
+   2. Импортировать ЭТОТ файл в globals.css сразу после @import "tailwindcss":
+        @import "tailwindcss";
+        @import "./yaa-dashboard.css";   (или вставить блок @theme ниже)
+   3. Готово — серая шкала станет тёмно-зелёной YAA, индиго-акцент → неон-зелёный.
+      Разметку трогать почти не нужно: меняются сами токены Tailwind.
+
+   Точечно (по желанию):
+   - захардкоженные hex в чартах (#6366f1 и т.п.) заменить на YAA chart-палитру
+     (см. --yaa-chart-* ниже);
+   - фон body → #040706;
+   - шрифт → Space Grotesk.
+   ============================================================ */
+
+@theme {
+  /* Серая шкала Tailwind → YAA тёмно-зелёная.
+     Тёмный конец = фоны/поверхности, светлый = текст. */
+  --color-gray-950: #040706;   /* самый тёмный фон (= --yaa-bg) */
+  --color-gray-900: #08120d;   /* панели, dark:bg-gray-900 */
+  --color-gray-800: #0e1f16;   /* поверхности, бордеры dark:border-gray-800 */
+  --color-gray-700: #15311f;
+  --color-gray-600: #2c5a44;
+  --color-gray-500: #5a7a68;
+  --color-gray-400: #7da590;   /* muted-текст (= --yaa-muted) */
+  --color-gray-300: #9fc4b0;
+  --color-gray-200: #c4e8d6;   /* body-текст (= --yaa-text-2) */
+  --color-gray-100: #e8fff5;
+  --color-gray-50:  #f4fff8;   /* primary-текст (= --yaa-text) */
+
+  /* Индиго (старый primary-акцент дашбордов) → YAA неон-зелёный */
+  --color-indigo-300: #6affd1;
+  --color-indigo-400: #4dffd1;
+  --color-indigo-500: #1dff9e;
+  --color-indigo-600: #1dff9e;
+  --color-indigo-700: #14cc7e;
+
+  /* YAA chart-палитра на тёмном (мульти-серия): зелёный ведущий + акценты бренда */
+  --yaa-chart-1: #1dff9e;  /* green */
+  --yaa-chart-2: #39d0d8;  /* cyan */
+  --yaa-chart-3: #fbbf24;  /* amber */
+  --yaa-chart-4: #a78bfa;  /* purple */
+  --yaa-chart-5: #ff6b9d;  /* pink */
+  --yaa-chart-6: #4dffd1;  /* mint */
+  --yaa-chart-7: #ff9871;  /* coral */
+  --yaa-chart-8: #6bcf7f;  /* leaf */
+}
