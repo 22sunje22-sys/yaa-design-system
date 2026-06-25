@@ -105,6 +105,32 @@ intickets-dashboard и yaa-fairytale-dashboard.
 
 Продуктовые инструменты используют чуть более «софт» зелёный `--yaa-green #1dff9e`. Жёлтый — не для интерфейса, только маркетинг/CTA.
 
+
+## Логотип
+
+Логотип YAA **обязателен** в любом виджете, презентации или дашборде, созданном по этой дизайн-системе.
+
+- **Файл:** `src/assets/yaa-logo-mark.webp` — граффити-монограмма «YAA» в чёрном круге на кислотном зелёном (#1dff9e).
+- **Размер:** 36–40 px в навбаре/шапке (на каждом экране/слайде), 52–64 px на главном/титульном экране.
+- **CSP-ограниченные среды** (claude.ai widget и аналогичные песочницы): GitHub raw URL заблокирован — использовать inline SVG:
+
+```svg
+<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="18" cy="18" r="18" fill="#1dff9e"/>
+  <text x="18" y="14" text-anchor="middle"
+    font-family="Space Grotesk, sans-serif" font-weight="800" font-size="7"
+    fill="#040706" letter-spacing="0.5">YET</text>
+  <text x="18" y="23" text-anchor="middle"
+    font-family="Space Grotesk, sans-serif" font-weight="800" font-size="7"
+    fill="#040706" letter-spacing="0.5">ANOTHER</text>
+  <text x="18" y="30.5" text-anchor="middle"
+    font-family="Space Grotesk, sans-serif" font-weight="800" font-size="7"
+    fill="#040706" letter-spacing="0.5">AGENCY</text>
+</svg>
+```
+
+- Не растягивать и не перекрашивать монограмму и круг-контейнер.
+
 ## Как использовать (промпт для AI)
 
 Чтобы сгенерировать новый экран в стиле YAA, дай модели такой контекст:
@@ -122,6 +148,12 @@ intickets-dashboard и yaa-fairytale-dashboard.
 - Жёлтый #fff600 не использовать в интерфейсе (только маркетинг).
 Компоненты бери из yaa-design-system: Button, TextInput, Select, Badge,
 Chip, Card, Callout, SignalCell, DataBar.
+Лого YAA — обязательно на каждом экране/слайде:
+  навбар — 36 px, главный экран — 52 px.
+  Файл: src/assets/yaa-logo-mark.webp (WebP).
+  Если WebP недоступен (CSP/sandbox) — inline SVG:
+  круг fill #1dff9e, три строки "YET / ANOTHER / AGENCY",
+  Space Grotesk 800, fill #040706.
 ```
 
 ## Деплой
