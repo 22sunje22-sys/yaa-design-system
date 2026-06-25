@@ -112,24 +112,31 @@ intickets-dashboard и yaa-fairytale-dashboard.
 
 - **Файл:** `src/assets/yaa-logo-mark.webp` — граффити-монограмма «YAA» в чёрном круге на кислотном зелёном (#1dff9e).
 - **Размер:** 36–40 px в навбаре/шапке (на каждом экране/слайде), 52–64 px на главном/титульном экране.
-- **CSP-ограниченные среды** (claude.ai widget и аналогичные песочницы): GitHub raw URL заблокирован — использовать inline SVG:
+- Не растягивать, не перекрашивать монограмму и круг-контейнер.
+
+### Использование в CSP-ограниченных средах (claude.ai widget, sandbox)
+
+GitHub raw URL заблокирован. Правильный порядок приоритетов:
+
+**1. Лучший вариант — data URI (реальный файл в base64).** Взять base64 через GitHub API:
+`GET /repos/22sunje22-sys/yaa-design-system/contents/src/assets/yaa-logo-mark.webp` — поле `content` и есть готовый base64. Вставить как `<img>`:
+
+```html
+<img src="data:image/webp;base64,{LOGO_B64}" width="36" height="36"
+     style="border-radius:50%;" alt="YAA">
+```
+
+**2. Запасной вариант — inline SVG-монограмма.** Показывает «YAA» (монограмму), а **НЕ** расшифровку «YET / ANOTHER / AGENCY»:
 
 ```svg
 <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
   <circle cx="18" cy="18" r="18" fill="#1dff9e"/>
-  <text x="18" y="14" text-anchor="middle"
-    font-family="Space Grotesk, sans-serif" font-weight="800" font-size="7"
-    fill="#040706" letter-spacing="0.5">YET</text>
   <text x="18" y="23" text-anchor="middle"
-    font-family="Space Grotesk, sans-serif" font-weight="800" font-size="7"
-    fill="#040706" letter-spacing="0.5">ANOTHER</text>
-  <text x="18" y="30.5" text-anchor="middle"
-    font-family="Space Grotesk, sans-serif" font-weight="800" font-size="7"
-    fill="#040706" letter-spacing="0.5">AGENCY</text>
+    font-family="Space Grotesk, sans-serif" font-weight="800" font-size="17"
+    fill="#040706">YAA</text>
 </svg>
 ```
 
-- Не растягивать и не перекрашивать монограмму и круг-контейнер.
 
 ## Как использовать (промпт для AI)
 
