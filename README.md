@@ -111,6 +111,7 @@ intickets-dashboard и yaa-fairytale-dashboard.
 Логотип YAA **обязателен** в любом виджете, презентации или дашборде, созданном по этой дизайн-системе.
 
 - **Файл:** `src/assets/yaa-logo-mark.webp` — граффити-монограмма «YAA» в чёрном круге на кислотном зелёном (#1dff9e).
+- **Скачать:** https://drive.google.com/file/d/1bEGgy4qV6VAmG2nPfIrcxfJwe2O3pVpy/view (Google Drive, всегда актуальная версия)
 - **Размер:** 36–40 px в навбаре/шапке (на каждом экране/слайде), 52–64 px на главном/титульном экране.
 - Не растягивать, не перекрашивать монограмму и круг-контейнер.
 
@@ -118,24 +119,23 @@ intickets-dashboard и yaa-fairytale-dashboard.
 
 GitHub raw URL заблокирован. Правильный порядок приоритетов:
 
-**1. Лучший вариант — data URI (реальный файл в base64).** Взять base64 через GitHub API:
-`GET /repos/22sunje22-sys/yaa-design-system/contents/src/assets/yaa-logo-mark.webp` — поле `content` и есть готовый base64. Вставить как `<img>`:
+**1. Google Drive MCP** — вызвать `download_file_content` с fileId `1bEGgy4qV6VAmG2nPfIrcxfJwe2O3pVpy`. MCP вернёт base64 напрямую:
 
 ```html
-<img src="data:image/webp;base64,{LOGO_B64}" width="36" height="36"
+<img src="data:image/webp;base64,{content из MCP}" width="36" height="36"
      style="border-radius:50%;" alt="YAA">
 ```
 
-**2. Запасной вариант — inline SVG-монограмма.** Показывает «YAA» (монограмму), а **НЕ** расшифровку «YET / ANOTHER / AGENCY»:
+**2. GitHub API** — `GET /repos/22sunje22-sys/yaa-design-system/contents/src/assets/yaa-logo-mark.webp`, поле `content` — готовый base64.
 
-```svg
-<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="18" cy="18" r="18" fill="#1dff9e"/>
-  <text x="18" y="23" text-anchor="middle"
-    font-family="Space Grotesk, sans-serif" font-weight="800" font-size="17"
-    fill="#040706">YAA</text>
-</svg>
+**3. Запасной вариант — текст `ya.agency`** в цвете акцента:
+
+```html
+<span style="font-family:'Space Grotesk',sans-serif;font-weight:700;
+             font-size:15px;color:#1dff9e;letter-spacing:-0.02em;">ya.agency</span>
 ```
+
+⚠️ Никогда не рисовать SVG с текстом «YET», «ANOTHER», «AGENCY» — это не логотип.
 
 
 ## Как использовать (промпт для AI)
@@ -155,12 +155,11 @@ GitHub raw URL заблокирован. Правильный порядок п�
 - Жёлтый #fff600 не использовать в интерфейсе (только маркетинг).
 Компоненты бери из yaa-design-system: Button, TextInput, Select, Badge,
 Chip, Card, Callout, SignalCell, DataBar.
-Лого YAA — обязательно на каждом экране/слайде:
-  навбар — 36 px, главный экран — 52 px.
-  Файл: src/assets/yaa-logo-mark.webp (WebP).
-  Если WebP недоступен (CSP/sandbox) — inline SVG:
-  круг fill #1dff9e, три строки "YET / ANOTHER / AGENCY",
-  Space Grotesk 800, fill #040706.
+Брендинг ya.agency — обязателен на каждом экране/слайде:
+  навбар — текст "ya.agency" в #1dff9e, Space Grotesk 700, 15px.
+  Если нужна картинка-лого: Google Drive fileId 1bEGgy4qV6VAmG2nPfIrcxfJwe2O3pVpy
+  (скачать через Drive MCP → download_file_content).
+  Никогда не рисовать SVG с "YET / ANOTHER / AGENCY".
 ```
 
 ## Деплой
